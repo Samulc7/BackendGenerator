@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1>⚙️ Backend Generator</h1>
+        <p>Crie seu backend automaticamente</p>
+    </header>
+
+    <main class="container">
+
+        <section class="apresentacao">
+            <h2>GERADOR AUTOMÁTICO DE BACKEND</h2>
+            <h3>Crie seu backend em poucos segundos.</h3>
+            <p>
+                Importe seu script SQL, analise suas tabelas e gere
+                automaticamente uma estrutura completa de backend
+                com Node.js, Express e MySQL.
+            </p>
+        </section>
+
+        <section class="painel">
+
+            <h2>📁 Importar banco de dados</h2>
+            <p>Envie seu arquivo SQL ou cole o código abaixo.</p>
+
+            <div class="upload">
+                <label for="arquivoSQL">Selecionar arquivo .SQL</label>
+                <input type="file" id="arquivoSQL" accept=".sql">
+                <span id="nomeArquivo">Nenhum arquivo selecionado.</span>
+            </div>
+
+            <label for="codigoSQL">Código SQL</label>
+            <textarea
+                id="codigoSQL"
+                placeholder="Cole seu código SQL aqui..."
+            ></textarea>
+
+            <div class="acoes">
+                <button id="btnAnalisar">🔍 Analisar SQL</button>
+                <button id="btnGerar" disabled>⚡ Gerar Backend</button>
+            </div>
+
+            <div id="mensagem" class="mensagem oculto"></div>
+
+        </section>
+
+        <section id="resultado" class="resultado oculto">
+            <h2>📊 Resultado da análise</h2>
+
+            <div class="informacoes">
+                <div class="info-card">
+                    <span>Banco de dados</span>
+                    <strong id="nomeBanco">-</strong>
+                </div>
+
+                <div class="info-card">
+                    <span>Total de tabelas</span>
+                    <strong id="totalTabelas">0</strong>
+                </div>
+            </div>
+
+            <h3>📋 Tabelas encontradas</h3>
+            <div id="listaTabelas"></div>
+        </section>
+
+        <section id="sucesso" class="sucesso oculto">
+            <h2>✅ Backend gerado com sucesso!</h2>
+
+            <p>Pasta criada em:</p>
+            <strong id="localGerado"></strong>
+
+            <a
+                id="btnBaixar"
+                href="/api/baixar"
+                class="botao-baixar"
+            >
+                📦 Baixar Backend em ZIP
+            </a>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

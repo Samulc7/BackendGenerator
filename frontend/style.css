@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+.cabecalho {
+    background: #111c35;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #263653;
+}
+
+.cabecalho h1 {
+    color: #60a5fa;
+    font-size: 28px;
+}
+
+.cabecalho p {
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 950px;
+    margin: 40px auto;
+}
+
+.apresentacao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.apresentacao h2 {
+    color: #60a5fa;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.apresentacao h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.apresentacao p {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.painel,
+.resultado,
+.sucesso {
+    background: #1e293b;
+    padding: 28px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #334155;
+}
+
+.painel h2,
+.resultado h2 {
+    margin-bottom: 12px;
+}
+
+.painel p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.upload {
+    background: #26354d;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+}
+
+.upload label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.upload input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#nomeArquivo {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.painel > label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+textarea {
+    width: 100%;
+    min-height: 220px;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: white;
+    font-family: monospace;
+    font-size: 14px;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #60a5fa;
+}
+
+.acoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #475569;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.mensagem {
+    margin-top: 18px;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.sucesso-msg {
+    background: #14532d;
+    color: #bbf7d0;
+}
+
+.erro {
+    background: #7f1d1d;
+    color: #fecaca;
+}
+
+.aviso {
+    background: #78350f;
+    color: #fde68a;
+}
+
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.info-card {
+    background: #26354d;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.info-card span {
+    display: block;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.info-card strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 20px;
+    color: #60a5fa;
+}
+
+.resultado h3 {
+    margin: 20px 0 12px;
+}
+
+.tabela-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px;
+    background: #26354d;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tabela-item span {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.sucesso {
+    border-color: #16a34a;
+}
+
+.sucesso h2 {
+    color: #4ade80;
+    margin-bottom: 15px;
+}
+
+.sucesso p {
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
+
+#localGerado {
+    display: block;
+    overflow-wrap: anywhere;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.botao-baixar {
+    display: inline-block;
+    padding: 14px 22px;
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.botao-baixar:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.oculto {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+    }
+
+    .apresentacao h3 {
+        font-size: 22px;
+    }
+
+    .painel,
+    .resultado,
+    .sucesso {
+        padding: 20px;
+    }
+
+    .informacoes {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    .acoes button {
+        width: 100%;
+    }
+
+    .tabela-item {
+        flex-direction: column;
+    }
+}
